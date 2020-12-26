@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <title>Login | SoBot</title>
+  <link rel="stylesheet" type="text/css" href="website.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link
+    rel="shortcut icon"
+    href="https://cdn.glitch.com/39c366b4-bf9e-4d2c-aefc-c339711284eb%2Fsobot2.png?v=1606682898355"
+  />
+  <body>
+    Bonjour, merci de retrer votre mot de passe apres avoir cliquer sur le
+    bouton ci-dessous
+  </body>
+  <script>
+    function passWord() {
+      var testV = 1;
+      var pass1 = prompt("Veuillez entrer le mot de passe", " ");
+      while (testV < 99999999) {
+        if (!pass1) history.go(-1);
+        if (pass1.toLowerCase() == "45855525244452222422424245225427225") {
+          alert("Mot de passe correct !", "Cliquez sur ");
+          window.location.href = "https://sobot.fr/beta/QXJ0aHlzdG9uZQ==";
+          break;
+        }
+        testV += 1;
+        var pass1 = prompt(
+          "Accès interdit - Mot de passe incorrect. Veuillez réessayer.",
+          "Mot de passe"
+        );
+      }
+      if (
+        (pass1.toLowerCase() != "45855525244452222422424245225427225") &
+        (testV == 3)
+      )
+        history.go(-1);
+      return " ";
+    }
+  </script>
+  <center>
+    <form>
+      <input
+        type="button"
+        value="Page protégée par mot de passe, cliquez ici et rentrez le mot de passe indiqué"
+        onclick="passWord()"
+      />
+    </form>
+  </center>
+</html>
